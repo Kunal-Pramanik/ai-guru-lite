@@ -1,0 +1,314 @@
+{
+  "chapter": {
+    "id": "c7-ch12",
+    "class": 7,
+    "number": 12,
+    "book": "Curiosity (NCERT Science, Grade 7)",
+    "pages": "169-188",
+    "title": { "hi": "पृथ्वी, चंद्रमा और सूर्य", "en": "Earth, Moon, and the Sun" }
+  },
+  "topics": [
+    {
+      "id": "rotation",
+      "section": "12.1",
+      "pages": "169-171",
+      "emoji": "🌍",
+      "diagram": "earthSpin",
+      "title": { "hi": "सूरज पूरब से क्यों उगता है?", "en": "Why does the Sun rise in the East?" },
+      "short": { "hi": "पृथ्वी का अपनी धुरी पर घूमना", "en": "The Earth spinning on its axis" },
+      "term": { "hi": "घूर्णन", "en": "Rotation" },
+      "keywords": "Rashmika coconut tree shadows, Sun rises East sets West, merry-go-round Activity 12.1, spinning top fan ball, Earth's axis of rotation, North Pole South Pole Equator, rotation 24 hours, anti-clockwise West to East, globe sticker Activity 12.2",
+      "scenes": [
+        { "v": "story", "who": "r", "hi": "गुरु जी, सुबह सूरज पूरब में होता है और शाम को पश्चिम में। क्या सूरज सच में आसमान में चलता है?", "en": "Guru ji, in the morning the Sun is in the East and in the evening it is in the West. Does the Sun really move across the sky?" },
+        { "v": "sunSky", "who": "g", "hi": "देखने में तो ऐसा ही लगता है कि सूरज पूरब से निकलकर पश्चिम में डूबता है। पर असली बात कुछ और है!", "en": "It looks like the Sun comes up in the East and goes down in the West. But the real reason is different!" },
+        { "v": "merryGoRound", "who": "g", "hi": "झूले वाली चकरी पर बैठकर घूमो, तो पेड़ और घर उल्टी दिशा में घूमते दिखते हैं। पर असल में घूम तुम रहे हो, पेड़ नहीं।", "en": "When you sit on a merry-go-round and spin, trees and houses seem to move the other way. But it is you who is moving, not the trees." },
+        { "v": "earthSpin", "who": "g", "hi": "ठीक वैसे ही हमारी पृथ्वी लट्टू की तरह अपनी धुरी पर घूमती है। किताब में इसे घूर्णन, यानी Rotation कहते हैं।", "en": "In the same way, our Earth spins like a top on its axis. The textbook calls this rotation." },
+        { "v": "earthSpin", "who": "g", "hi": "पृथ्वी पश्चिम से पूरब की ओर घूमती है, और एक पूरा चक्कर लगभग चौबीस घंटे में लगाती है।", "en": "The Earth spins from West to East, and one full turn takes about twenty-four hours." },
+        { "v": "sunSky", "who": "g", "hi": "इसीलिए सूरज पूरब से उगता और पश्चिम में डूबता दिखता है। सूरज नहीं चलता, हम पृथ्वी के साथ घूम रहे हैं!", "en": "That is why the Sun seems to rise in the East and set in the West. The Sun is not moving. We are spinning with the Earth!" }
+      ],
+      "notes": {
+        "hi": [
+          "पृथ्वी लट्टू की तरह अपनी **धुरी** पर घूमती है।",
+          "इस घूमने को **घूर्णन** (Rotation) कहते हैं।",
+          "पृथ्वी **पश्चिम से पूरब** की ओर घूमती है।",
+          "एक चक्कर लगभग **24 घंटे** में पूरा होता है।",
+          "इसीलिए सूरज **पूरब में उगता** और पश्चिम में डूबता दिखता है।",
+          "सच में सूरज नहीं चलता, **पृथ्वी घूमती** है।"
+        ],
+        "en": [
+          "The Earth spins like a top on its **axis**.",
+          "This spinning is called **rotation**.",
+          "The Earth spins from **West to East**.",
+          "One full turn takes about **24 hours**.",
+          "So the Sun seems to **rise in the East** and set in the West.",
+          "The Sun is not really moving; the **Earth is spinning**."
+        ]
+      },
+      "example": { "hi": "चलती बस से बाहर देखो: पेड़ पीछे भागते दिखते हैं, पर असल में बस चल रही है।", "en": "Look out of a moving bus: trees seem to run backwards, but it is the bus that is moving." }
+    },
+    {
+      "id": "daynight",
+      "section": "12.1",
+      "pages": "171-173",
+      "emoji": "🌗",
+      "diagram": "dayNight",
+      "title": { "hi": "दिन और रात कैसे होते हैं?", "en": "How do day and night happen?" },
+      "short": { "hi": "आधी पृथ्वी पर रोशनी, आधी पर अंधेरा", "en": "Half the Earth is lit, half is dark" },
+      "term": { "hi": "दिन-रात का चक्र", "en": "Day-night cycle" },
+      "keywords": "globe and torch Fig 12.4(b), half of the globe receives light, day time night time, sunrise first in eastern part of India, sunlight falls on half of the Earth Fig 12.5, girl on rotating Earth at Equator Fig 12.6, Foucault pendulum Parliament",
+      "scenes": [
+        { "v": "story", "who": "r", "hi": "गुरु जी, जब भारत में दिन होता है, तब अमेरिका में रात क्यों होती है?", "en": "Guru ji, when it is day in India, why is it night in America?" },
+        { "v": "dayNight", "who": "g", "hi": "सूरज की रोशनी एक समय में पृथ्वी के सिर्फ़ आधे हिस्से पर पड़ती है।", "en": "At any time, sunlight falls on only half of the Earth." },
+        { "v": "dayNight", "who": "g", "hi": "जिस आधे हिस्से पर रोशनी पड़ती है, वहाँ दिन होता है। बाकी आधे हिस्से में अंधेरा, यानी रात होती है।", "en": "The half that gets light has day. The other half is dark, so it has night." },
+        { "v": "dayNight", "who": "g", "hi": "पृथ्वी लगातार घूमती है, इसलिए हमारा गाँव कभी रोशनी में आता है और कभी अंधेरे में।", "en": "The Earth keeps spinning, so our village moves into the light and then into the dark." },
+        { "v": "sunSky", "who": "g", "hi": "गाँव रोशनी में आता है तो सूर्योदय होता है, और अंधेरे में जाता है तो सूर्यास्त।", "en": "When the village moves into the light, it is sunrise. When it moves into the dark, it is sunset." },
+        { "v": "torchGlobe", "who": "g", "hi": "घर पर करके देखो: अंधेरे कमरे में टॉर्च से गेंद पर रोशनी डालो। आधी गेंद चमकेगी और आधी अंधेरी रहेगी!", "en": "Try it at home: in a dark room, shine a torch on a ball. Half the ball will shine and half will stay dark!" }
+      ],
+      "notes": {
+        "hi": [
+          "सूरज की रोशनी पृथ्वी के **आधे हिस्से** पर पड़ती है।",
+          "रोशनी वाले हिस्से में **दिन**, अंधेरे हिस्से में **रात** होती है।",
+          "दिन और रात पृथ्वी के **घूमने** (घूर्णन) से होते हैं।",
+          "रोशनी में आना = **सूर्योदय**, अंधेरे में जाना = **सूर्यास्त**।",
+          "भारत में दिन होता है तो **अमेरिका में रात**, क्योंकि वह पृथ्वी के दूसरी ओर है।",
+          "भारत में सूरज सबसे पहले **पूर्वी हिस्से** में उगता है।"
+        ],
+        "en": [
+          "Sunlight falls on **half of the Earth** at a time.",
+          "The lit half has **day**, the dark half has **night**.",
+          "Day and night happen because the Earth **spins** (rotation).",
+          "Moving into light = **sunrise**, moving into dark = **sunset**.",
+          "When it is day in India, it is **night in America**, on the other side of the Earth.",
+          "In India, the Sun rises first in the **eastern part**."
+        ]
+      },
+      "example": { "hi": "अंधेरे कमरे में टॉर्च और गेंद से खुद दिन-रात बनाकर देखो।", "en": "Make your own day and night with a torch and a ball in a dark room." }
+    },
+    {
+      "id": "polestar",
+      "section": "12.1",
+      "pages": "174-175",
+      "emoji": "⭐",
+      "diagram": "poleStar",
+      "title": { "hi": "तारे क्यों घूमते दिखते हैं? ध्रुव तारा", "en": "Why do stars seem to move? The Pole Star" },
+      "short": { "hi": "सप्तर्षि और ध्रुव तारा", "en": "Big Dipper and the Pole Star" },
+      "term": { "hi": "ध्रुव तारा", "en": "Pole Star" },
+      "keywords": "Activity 12.3 Big Dipper Saptarishi, Pole Star Dhruva Tara, Fig 12.7 sketch Pune, star trails astrophotography Mahuli, Aryabhata Aryabhatiya Golapada verse boat, 23 hours 56 minutes",
+      "scenes": [
+        { "v": "story", "who": "r", "hi": "गुरु जी, अगर पृथ्वी घूमती है, तो क्या रात में तारे भी घूमते दिखेंगे?", "en": "Guru ji, if the Earth spins, will the stars also seem to move at night?" },
+        { "v": "poleStar", "who": "g", "hi": "हाँ! सूरज की तरह तारे भी पूरब में उगते और पश्चिम में डूबते दिखते हैं।", "en": "Yes! Like the Sun, stars also seem to rise in the East and set in the West." },
+        { "v": "poleStar", "who": "g", "hi": "सप्तर्षि के सात तारे, जिन्हें Big Dipper भी कहते हैं, रात भर एक तारे के चारों ओर घूमते दिखते हैं।", "en": "The seven stars of the Saptarishi, also called the Big Dipper, seem to go around one star all night." },
+        { "v": "poleStar", "who": "g", "hi": "वह तारा है ध्रुव तारा, यानी Pole Star। वह लगभग एक ही जगह टिका हुआ दिखता है।", "en": "That star is the Pole Star, Dhruva Tara. It seems to stay almost in one place." },
+        { "v": "earthSpin", "who": "g", "hi": "ऐसा इसलिए, क्योंकि पृथ्वी की धुरी लगभग ध्रुव तारे की ओर इशारा करती है।", "en": "This is because the Earth's axis points almost towards the Pole Star." },
+        { "v": "boat", "who": "g", "hi": "हमारे आर्यभट ने बहुत पहले लिखा था: जैसे नाव में बैठे आदमी को किनारा पीछे जाता दिखता है, वैसे ही तारे चलते दिखते हैं।", "en": "Long ago, our Aryabhata wrote: just as a person in a moving boat sees the shore going back, the stars seem to move." }
+      ],
+      "notes": {
+        "hi": [
+          "पृथ्वी के घूमने से रात में **तारे भी घूमते** दिखते हैं।",
+          "तारे भी **पूरब में उगते** और पश्चिम में डूबते दिखते हैं।",
+          "**सप्तर्षि** (Big Dipper) के तारे ध्रुव तारे के चारों ओर घूमते दिखते हैं।",
+          "**ध्रुव तारा** लगभग एक जगह टिका दिखता है।",
+          "कारण: पृथ्वी की **धुरी** ध्रुव तारे की ओर इशारा करती है।",
+          "**आर्यभट** ने लगभग 1500 साल पहले यह बात समझाई थी।"
+        ],
+        "en": [
+          "Because the Earth spins, **stars also seem to move** at night.",
+          "Stars also seem to **rise in the East** and set in the West.",
+          "The stars of the **Big Dipper** (Saptarishi) seem to circle the Pole Star.",
+          "The **Pole Star** seems to stay almost in one place.",
+          "Reason: the Earth's **axis** points towards the Pole Star.",
+          "**Aryabhata** explained this about 1500 years ago."
+        ]
+      },
+      "example": { "hi": "रात में हर 2 घंटे पर सप्तर्षि को देखो और उसका चित्र बनाओ। वह घूमता हुआ दिखेगा।", "en": "Look at the Big Dipper every 2 hours at night and draw it. You will see it turn." }
+    },
+    {
+      "id": "revolution",
+      "section": "12.2",
+      "pages": "175-176",
+      "emoji": "☀️",
+      "diagram": "orbit",
+      "title": { "hi": "पृथ्वी सूरज के चारों ओर कैसे घूमती है?", "en": "How does the Earth go around the Sun?" },
+      "short": { "hi": "परिक्रमा और रात के बदलते तारे", "en": "Revolution and the changing night sky" },
+      "term": { "hi": "परिक्रमा", "en": "Revolution" },
+      "keywords": "12.2 Revolution of the Earth, orbit nearly circular top view, 365 days 6 hours, 12.2.1 changing view of night sky, Fig 12.8 stars that rise at sunset in different months March June September December, Bhil and Pawara communities monsoon",
+      "scenes": [
+        { "v": "story", "who": "r", "hi": "गुरु जी, शाम को पूरब में दिखने वाले तारे हर महीने बदल क्यों जाते हैं?", "en": "Guru ji, why do the stars we see in the East in the evening change every month?" },
+        { "v": "orbit", "who": "g", "hi": "पृथ्वी अपनी धुरी पर घूमने के साथ-साथ सूरज के चारों ओर भी चक्कर लगाती है। इसे परिक्रमा, यानी Revolution कहते हैं।", "en": "While spinning on its axis, the Earth also goes around the Sun. This is called revolution." },
+        { "v": "orbit", "who": "g", "hi": "पृथ्वी जिस रास्ते पर चक्कर लगाती है, उसे कक्षा कहते हैं। ऊपर से देखने पर यह लगभग गोल है।", "en": "The path the Earth takes is called its orbit. Seen from above, it is nearly a circle." },
+        { "v": "orbit", "who": "g", "hi": "एक पूरा चक्कर लगाने में लगभग तीन सौ पैंसठ दिन, यानी एक साल लगता है।", "en": "One full trip around the Sun takes about three hundred and sixty-five days, that is, one year." },
+        { "v": "nightSky", "who": "g", "hi": "जगह बदलने से रात में हमारा मुँह आसमान के अलग हिस्से की ओर होता है। इसलिए हर महीने अलग तारे दिखते हैं।", "en": "As the Earth moves, at night we face a different part of the sky. So we see different stars in different months." },
+        { "v": "story", "who": "g", "hi": "भील और पावरा समुदाय के लोग कुछ खास तारों को देखकर बारिश आने का अंदाज़ा लगाते थे!", "en": "The Bhil and Pawara communities used certain stars to know when the monsoon rains would come!" }
+      ],
+      "notes": {
+        "hi": [
+          "पृथ्वी सूरज के चारों ओर चक्कर लगाती है। इसे **परिक्रमा** कहते हैं।",
+          "चक्कर के रास्ते को **कक्षा** (Orbit) कहते हैं, जो लगभग गोल है।",
+          "एक परिक्रमा में लगभग **365 दिन 6 घंटे** लगते हैं।",
+          "**घूर्णन** = अपनी धुरी पर घूमना (24 घंटे)। **परिक्रमा** = सूरज के चारों ओर घूमना (1 साल)।",
+          "परिक्रमा के कारण रात में **हर महीने अलग तारे** दिखते हैं।"
+        ],
+        "en": [
+          "The Earth goes around the Sun. This is called **revolution**.",
+          "The path is called the **orbit**, and it is nearly a circle.",
+          "One revolution takes about **365 days and 6 hours**.",
+          "**Rotation** = spinning on its axis (24 hours). **Revolution** = going around the Sun (1 year).",
+          "Because of revolution, we see **different stars in different months**."
+        ]
+      },
+      "example": { "hi": "अपनी जगह पर गोल घूमते हुए किसी पेड़ के चारों ओर चक्कर भी लगाओ। यही घूर्णन और परिक्रमा है!", "en": "Spin around yourself while also walking around a tree. That is rotation and revolution together!" }
+    },
+    {
+      "id": "seasons",
+      "section": "12.2.2",
+      "pages": "177-179",
+      "emoji": "🌦️",
+      "diagram": "seasons",
+      "title": { "hi": "मौसम क्यों बदलते हैं?", "en": "Why do the seasons change?" },
+      "short": { "hi": "धुरी का झुकाव और ऋतुएँ", "en": "Tilted axis and seasons" },
+      "term": { "hi": "ऋतुएँ", "en": "Seasons" },
+      "keywords": "12.2.2 Seasons on the Earth, axis tilted, Fig 12.9 June December positions, Fig 12.10 intense sunlight spread smaller area, Fig 12.11 longer daytime June, Northern Hemisphere summer, Southern Hemisphere reversed, incorrect reasons distance, Earth closest to Sun in January, summer solstice 21 June winter solstice 22 December equinox, poles six months sunshine, equator 12 hours",
+      "scenes": [
+        { "v": "story", "who": "r", "hi": "गुरु जी, गर्मी में दिन लंबे और सर्दी में छोटे क्यों होते हैं? मौसम क्यों बदलता है?", "en": "Guru ji, why are days long in summer and short in winter? Why do the seasons change?" },
+        { "v": "seasons", "who": "g", "hi": "पृथ्वी की धुरी सीधी खड़ी नहीं है, थोड़ी झुकी हुई है। सूरज का चक्कर लगाते हुए भी यह झुकाव वैसा ही रहता है।", "en": "The Earth's axis is not straight up. It is tilted. It stays tilted the same way as the Earth goes around the Sun." },
+        { "v": "seasons", "who": "g", "hi": "जून में पृथ्वी का उत्तरी हिस्सा, जहाँ भारत है, सूरज की ओर झुका होता है। तब हमारे यहाँ गर्मी होती है।", "en": "In June, the northern half of the Earth, where India is, leans towards the Sun. Then we have summer." },
+        { "v": "rays", "who": "g", "hi": "तब धूप सीधी पड़ती है, कम जगह पर फैलती है और ज़्यादा तेज़ होती है। और दिन बारह घंटे से लंबे होते हैं।", "en": "Then sunlight falls more directly, spreads over a smaller area and is stronger. And days are longer than twelve hours." },
+        { "v": "seasons", "who": "g", "hi": "दिसंबर में उत्तरी हिस्सा सूरज से दूर झुका होता है। धूप तिरछी पड़ती है और दिन छोटे होते हैं। इसलिए सर्दी आती है।", "en": "In December, the northern half leans away from the Sun. Sunlight is slanted and days are short. So winter comes." },
+        { "v": "seasons", "who": "g", "hi": "याद रखो: मौसम पृथ्वी के सूरज से पास या दूर होने से नहीं बदलते। वे धुरी के झुकाव और पृथ्वी के गोल आकार से बदलते हैं।", "en": "Remember: seasons do not change because the Earth goes nearer to or farther from the Sun. They change because of the tilted axis and the round shape of the Earth." }
+      ],
+      "notes": {
+        "hi": [
+          "पृथ्वी की धुरी **झुकी हुई** है।",
+          "मौसम धुरी के **झुकाव** और पृथ्वी के **गोल आकार** से बदलते हैं। किताब में इन्हें **ऋतुएँ** कहा गया है।",
+          "**जून**: उत्तरी हिस्सा (भारत) सूरज की ओर झुका, इसलिए **गर्मी** और लंबे दिन।",
+          "**दिसंबर**: उत्तरी हिस्सा सूरज से दूर झुका, इसलिए **सर्दी** और छोटे दिन।",
+          "सबसे लंबा दिन लगभग **21 जून** और सबसे छोटा दिन लगभग **22 दिसंबर** को होता है।",
+          "गलत सोच: मौसम सूरज से **दूरी** के कारण नहीं बदलते।"
+        ],
+        "en": [
+          "The Earth's axis is **tilted**.",
+          "Seasons happen because of the **tilt** and the **round shape** of the Earth.",
+          "**June**: the northern half (India) leans towards the Sun, so **summer** and long days.",
+          "**December**: the northern half leans away, so **winter** and short days.",
+          "The longest day is around **21 June**; the shortest is around **22 December**.",
+          "Wrong idea: seasons are **not** caused by the Earth's **distance** from the Sun."
+        ]
+      },
+      "example": { "hi": "टॉर्च सीधी ज़मीन पर डालो तो छोटा, तेज़ गोला बनता है। तिरछी डालो तो बड़ा, फीका। सीधी धूप ज़्यादा गर्म करती है।", "en": "Shine a torch straight down: a small, bright spot. Tilt it: a big, dim patch. Direct sunlight heats more." }
+    },
+    {
+      "id": "eclipse",
+      "section": "12.3",
+      "pages": "179-180",
+      "emoji": "🌑",
+      "diagram": "sizes",
+      "title": { "hi": "ग्रहण क्या है? छोटा चाँद बड़े सूरज को कैसे ढकता है?", "en": "What is an eclipse? How can the small Moon hide the big Sun?" },
+      "short": { "hi": "अंगूठे वाला खेल और ग्रहण", "en": "The thumb game and eclipses" },
+      "term": { "hi": "ग्रहण", "en": "Eclipse" },
+      "keywords": "12.3 Eclipses, Mercury and Venus cannot block the Sun, Moon natural satellite revolves around Earth, Activity 12.4 thumb covering friend's head 5 metres, apparent size, Fig 12.12, Transit of Venus",
+      "scenes": [
+        { "v": "story", "who": "r", "hi": "गुरु जी, चाँद तो सूरज से बहुत छोटा है। फिर वह सूरज को कैसे ढक लेता है?", "en": "Guru ji, the Moon is much smaller than the Sun. So how can it cover the Sun?" },
+        { "v": "thumb", "who": "g", "hi": "एक खेल खेलो: दोस्त को पाँच मीटर दूर खड़ा करो, एक आँख बंद करो और अंगूठा आगे करो।", "en": "Play a game: ask a friend to stand five metres away, close one eye and hold out your thumb." },
+        { "v": "thumb", "who": "g", "hi": "तुम्हारा छोटा सा अंगूठा दोस्त का पूरा सिर ढक लेता है! क्योंकि अंगूठा आँख के पास है और दोस्त दूर है।", "en": "Your small thumb hides your friend's whole head! Because the thumb is close to your eye and your friend is far away." },
+        { "v": "sizes", "who": "g", "hi": "चाँद भी सूरज से बहुत छोटा है, पर हमारे बहुत पास है। इसलिए आसमान में दोनों लगभग बराबर दिखते हैं।", "en": "The Moon is also much smaller than the Sun, but much closer to us. So in the sky, both look about the same size." },
+        { "v": "moonOrbit", "who": "g", "hi": "चाँद पृथ्वी के चारों ओर घूमता है। कभी-कभी सूरज, चाँद और पृथ्वी एक सीधी लाइन में आ जाते हैं। तब ग्रहण होता है।", "en": "The Moon goes around the Earth. Sometimes the Sun, the Moon and the Earth come in one straight line. Then an eclipse happens." },
+        { "v": "compare", "who": "g", "hi": "ग्रहण डरने की बात नहीं है, यह बस छाया का खेल है! आगे सूर्य ग्रहण और चंद्र ग्रहण देखो।", "en": "An eclipse is nothing to fear. It is just a game of shadows! Next, see the solar eclipse and the lunar eclipse." }
+      ],
+      "notes": {
+        "hi": [
+          "ग्रहण तब होता है जब सूरज, चाँद और पृथ्वी **एक सीध** में आ जाते हैं।",
+          "चाँद सूरज से बहुत **छोटा** है, पर हमारे बहुत **पास** है।",
+          "पास की छोटी चीज़ दूर की बड़ी चीज़ को **ढक** सकती है (अंगूठे वाला खेल)।",
+          "इसलिए आसमान में चाँद और सूरज **बराबर आकार** के दिखते हैं।",
+          "बुध और शुक्र ग्रह बहुत दूर हैं, इसलिए सूरज को **नहीं ढक** पाते।",
+          "ग्रहण बस **छाया का खेल** है, डरने की बात नहीं।"
+        ],
+        "en": [
+          "An eclipse happens when the Sun, Moon and Earth come in **one straight line**.",
+          "The Moon is much **smaller** than the Sun, but much **closer** to us.",
+          "A small thing near you can **hide** a big thing far away (the thumb game).",
+          "So the Moon and Sun look about the **same size** in the sky.",
+          "Mercury and Venus are too far away, so they **cannot cover** the Sun.",
+          "An eclipse is just a **game of shadows**, nothing to fear."
+        ]
+      },
+      "example": { "hi": "एक आँख बंद करके अंगूठे से दूर खड़े दोस्त का सिर ढककर देखो!", "en": "Close one eye and hide your far-away friend's head with your thumb!" }
+    },
+    {
+      "id": "solar",
+      "section": "12.3.1",
+      "pages": "180-182",
+      "emoji": "🌒",
+      "diagram": "solarEclipse",
+      "title": { "hi": "सूर्य ग्रहण", "en": "Solar eclipse" },
+      "short": { "hi": "जब चाँद सूरज को ढक ले", "en": "When the Moon hides the Sun" },
+      "term": { "hi": "सूर्य ग्रहण", "en": "Solar eclipse" },
+      "keywords": "12.3.1 Solar eclipse, Moon between Sun and Earth, Fig 12.13 geometry of solar eclipse, total solar eclipse, partial solar eclipse, Fig 12.14 diamond ring, safe viewing caution, Fig 12.15 public solar eclipse viewing Ooty, mirror ball projection, superstitions, grahan, Surya Siddhanta",
+      "scenes": [
+        { "v": "story", "who": "r", "hi": "गुरु जी, सूर्य ग्रहण में दिन में ही अंधेरा क्यों हो जाता है?", "en": "Guru ji, why does it get dark in the daytime during a solar eclipse?" },
+        { "v": "solarEclipse", "who": "g", "hi": "जब चाँद घूमते-घूमते सूरज और पृथ्वी के ठीक बीच में आ जाता है, तो वह सूरज की रोशनी रोक लेता है।", "en": "When the Moon, going around, comes exactly between the Sun and the Earth, it blocks the sunlight." },
+        { "v": "solarEclipse", "who": "g", "hi": "चाँद की छाया पृथ्वी के एक छोटे हिस्से पर पड़ती है। इसे किताब में सूर्य ग्रहण, यानी Solar Eclipse कहते हैं।", "en": "The Moon's shadow falls on a small part of the Earth. The textbook calls this a solar eclipse." },
+        { "v": "eclipseSky", "who": "g", "hi": "जहाँ पूरी छाया पड़ती है, वहाँ सूरज पूरा ढक जाता है। यह पूर्ण सूर्य ग्रहण है। कुछ मिनट के लिए दिन में रात जैसा अंधेरा हो जाता है!", "en": "Where the full shadow falls, the Sun is fully covered. This is a total solar eclipse. For a few minutes, the day becomes dark like night!" },
+        { "v": "eclipseSky", "who": "g", "hi": "आस-पास की जगहों पर सूरज का कुछ हिस्सा ही ढकता है। इसे आंशिक सूर्य ग्रहण कहते हैं।", "en": "In nearby places, only part of the Sun is covered. This is called a partial solar eclipse." },
+        { "v": "safety", "who": "g", "hi": "सावधान! सूर्य ग्रहण को कभी सीधे आँखों से, धूप के चश्मे से या दूरबीन से मत देखो। आँखें खराब हो सकती हैं। ग्रहण वाला खास चश्मा लगाओ, या शीशे से दीवार पर सूरज की परछाई बनाकर देखो।", "en": "Careful! Never look at a solar eclipse directly, or through sunglasses or binoculars. It can damage your eyes. Use special eclipse glasses, or use a mirror to make the Sun's image on a wall." }
+      ],
+      "notes": {
+        "hi": [
+          "सूर्य ग्रहण में **चाँद**, सूरज और पृथ्वी के **बीच** आ जाता है।",
+          "चाँद की **छाया** पृथ्वी के छोटे हिस्से पर पड़ती है।",
+          "**पूर्ण** सूर्य ग्रहण: सूरज पूरा ढक जाता है, कुछ **मिनट** अंधेरा।",
+          "**आंशिक** सूर्य ग्रहण: सूरज का कुछ हिस्सा ही ढकता है।",
+          "क्रम याद रखो: **सूरज ➜ चाँद ➜ पृथ्वी**।",
+          "⚠️ सूर्य ग्रहण को **कभी सीधे आँखों से मत देखो**।"
+        ],
+        "en": [
+          "In a solar eclipse, the **Moon** comes **between** the Sun and the Earth.",
+          "The Moon's **shadow** falls on a small part of the Earth.",
+          "**Total** solar eclipse: the Sun is fully covered; dark for a few **minutes**.",
+          "**Partial** solar eclipse: only part of the Sun is covered.",
+          "Remember the order: **Sun ➜ Moon ➜ Earth**.",
+          "⚠️ **Never look at a solar eclipse directly** with your eyes."
+        ]
+      },
+      "example": { "hi": "जैसे कोई तुम्हारे और बल्ब के बीच आ जाए, तो तुम पर उसकी छाया पड़ती है।", "en": "Like when someone stands between you and a bulb, their shadow falls on you." }
+    },
+    {
+      "id": "lunar",
+      "section": "12.3.2",
+      "pages": "182-183",
+      "emoji": "🌕",
+      "diagram": "lunarEclipse",
+      "title": { "hi": "चंद्र ग्रहण", "en": "Lunar eclipse" },
+      "short": { "hi": "जब पृथ्वी की छाया चाँद पर पड़े", "en": "When the Earth's shadow falls on the Moon" },
+      "term": { "hi": "चंद्र ग्रहण", "en": "Lunar eclipse" },
+      "keywords": "12.3.2 Lunar eclipse, Earth blocks sunlight from reaching the Moon, Earth's shadow on full disc of the Moon, Fig 12.16 geometry of lunar eclipse, total lunar eclipse dark red, partial lunar eclipse, safe to watch with naked eye, Stellarium, Kodaikanal Solar Observatory",
+      "scenes": [
+        { "v": "story", "who": "r", "hi": "गुरु जी, एक पूरे चाँद वाली रात को चाँद लाल क्यों दिख रहा था?", "en": "Guru ji, on one full moon night, why did the Moon look red?" },
+        { "v": "lunarEclipse", "who": "g", "hi": "कभी-कभी पृथ्वी, सूरज और चाँद के बीच में आ जाती है। तब पृथ्वी सूरज की रोशनी को चाँद तक पहुँचने नहीं देती।", "en": "Sometimes the Earth comes between the Sun and the Moon. Then the Earth stops sunlight from reaching the Moon." },
+        { "v": "lunarEclipse", "who": "g", "hi": "तब पृथ्वी की छाया चाँद पर पड़ती है। इसे चंद्र ग्रहण, यानी Lunar Eclipse कहते हैं। यह पूरे चाँद वाली रात, यानी पूर्णिमा को होता है।", "en": "Then the Earth's shadow falls on the Moon. This is called a lunar eclipse. It happens on a full moon night." },
+        { "v": "moonSky", "who": "g", "hi": "जब पूरा चाँद पृथ्वी की छाया में होता है, तो वह गहरा लाल दिखता है। यह पूर्ण चंद्र ग्रहण है।", "en": "When the whole Moon is in the Earth's shadow, it looks dark red. This is a total lunar eclipse." },
+        { "v": "moonSky", "who": "g", "hi": "जब चाँद का कुछ हिस्सा ही छाया में हो, तो इसे आंशिक चंद्र ग्रहण कहते हैं।", "en": "When only part of the Moon is in the shadow, it is a partial lunar eclipse." },
+        { "v": "compare", "who": "g", "hi": "अच्छी बात: चंद्र ग्रहण को खुली आँखों से देखना सुरक्षित है! याद रखो, सूर्य ग्रहण में चाँद बीच में होता है, और चंद्र ग्रहण में पृथ्वी बीच में।", "en": "Good news: it is safe to watch a lunar eclipse with your eyes! Remember: in a solar eclipse the Moon is in the middle; in a lunar eclipse the Earth is in the middle." }
+      ],
+      "notes": {
+        "hi": [
+          "चंद्र ग्रहण में **पृथ्वी**, सूरज और चाँद के **बीच** आ जाती है।",
+          "पृथ्वी की **छाया चाँद** पर पड़ती है।",
+          "यह **पूर्णिमा** (पूरे चाँद) की रात को होता है।",
+          "**पूर्ण** चंद्र ग्रहण में चाँद **गहरा लाल** दिखता है।",
+          "क्रम याद रखो: **सूरज ➜ पृथ्वी ➜ चाँद**।",
+          "चंद्र ग्रहण को **खुली आँखों से देखना सुरक्षित** है।"
+        ],
+        "en": [
+          "In a lunar eclipse, the **Earth** comes **between** the Sun and the Moon.",
+          "The **Earth's shadow** falls on the **Moon**.",
+          "It happens on a **full moon** night.",
+          "In a **total** lunar eclipse, the Moon looks **dark red**.",
+          "Remember the order: **Sun ➜ Earth ➜ Moon**.",
+          "It is **safe to watch** a lunar eclipse with your eyes."
+        ]
+      },
+      "example": { "hi": "सूर्य ग्रहण: चाँद बीच में। चंद्र ग्रहण: पृथ्वी बीच में। जो बीच में, उसकी छाया पड़ती है!", "en": "Solar eclipse: Moon in the middle. Lunar eclipse: Earth in the middle. Whoever is in the middle casts the shadow!" }
+    }
+  ]
+}
