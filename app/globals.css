@@ -122,3 +122,15 @@ body {
 .no-scrollbar { scrollbar-width: none; }
 
 @keyframes slideBar { 0% { transform: translateX(-100%); } 100% { transform: translateX(200%); } }
+/* ---------- Smart note: "Download PDF" (print) ---------- */
+@media print {
+  @page { margin: 10mm; }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  body { background: #fff !important; }
+  body * { visibility: hidden; }
+  #smart-note, #smart-note * { visibility: visible; }
+  #smart-note { position: absolute; left: 0; top: 0; width: 100%; box-shadow: none !important; padding: 0 !important; }
+  .no-print { display: none !important; }
+  .print-avoid { break-inside: avoid; }
+  .anim-in, .anim-pop { animation: none !important; }
+}
