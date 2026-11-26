@@ -66,6 +66,18 @@ const T: Record<string, { hi: string; en: string }> = {
   redMoon: { hi: "छाया में चाँद लाल दिखता है", en: "In the shadow the Moon looks red" },
   safeLunar: { hi: "देखना सुरक्षित ✓", en: "Safe to watch ✓" },
   notScale: { hi: "आकार और दूरी सही अनुपात में नहीं", en: "Not to scale" },
+  moonComes: { hi: "चाँद बीच में आया", en: "Moon comes in between" },
+  lightBlocked: { hi: "रोशनी रुकी", en: "Light blocked" },
+  umbra: { hi: "पूरी छाया", en: "Full shadow" },
+  penumbra: { hi: "हल्की छाया", en: "Light shadow" },
+  totalHere: { hi: "यहाँ पूर्ण सूर्य ग्रहण", en: "Total solar eclipse here" },
+  partialHere: { hi: "यहाँ आंशिक सूर्य ग्रहण", en: "Partial solar eclipse here" },
+  youHere: { hi: "तुम यहाँ हो", en: "You are here" },
+  dayDark: { hi: "दिन में रात जैसा अंधेरा!", en: "Dark like night in the daytime!" },
+  partCovered: { hi: "सूरज का कुछ हिस्सा ढका", en: "Only part of the Sun covered" },
+  moonShadowOnEarth: { hi: "चाँद की छाया पृथ्वी पर", en: "Moon's shadow on the Earth" },
+  moonOrbit: { hi: "चाँद का रास्ता", en: "Moon's path" },
+  sunlight: { hi: "धूप", en: "Sunlight" },
 };
 
 const tx = (k: string, lang: Lang) => (lang === "hi" || lang === "en" ? T[k]?.[lang] : EXTRA[lang].labels[k]) ?? T[k]?.en ?? k;
@@ -889,6 +901,187 @@ function MoonSky({ lang }: P) {
   );
 }
 
+
+/* ---------- Solar eclipse, step by step (book-style) ---------- */
+
+/** Book-style diagram: Sun → Moon → Earth with full shadow (umbra) and light shadow (penumbra). */
+function ShadowDiagram({ lang, focus, mini = false, uid }: { lang: Lang; focus?: "total" | "partial" | "both"; mini?: boolean; uid: string }) {
+  const E = { cx: 690, cy: 225, r: 120 };
+  const fadeIn = (delay: string) => (mini ? null : <animate attributeName="opacity" from="0" to="1" begin={delay} dur="1s" fill="freeze" />);
+  return (
+    <g>
+      <rect width={800} height={450} fill="url(#gSpace)" />
+      {!mini && <Stars n={45} seed={21} />}
+      <circle cx={E.cx} cy={E.cy} r={270} fill="none" stroke="#9fb4ff" strokeOpacity=".35" strokeWidth={2} strokeDasharray="8 10" />
+      <Sun cx={40} cy={225} r={150} rays={false} />
+      {/* sunlight wedges, like the textbook figure */}
+      <polygon points="70,90 70,150 420,206" fill="#ffe27a" opacity=".35" />
+      <polygon points="70,300 70,360 420,244" fill="#ffe27a" opacity=".35" />
+      <Earth cx={E.cx} cy={E.cy} r={E.r} night="right" spin={mini ? 0 : 12} id={`sdE-${uid}`} />
+      <defs>
+        <clipPath id={`sdC-${uid}`}>
+          <circle cx={E.cx} cy={E.cy} r={E.r} />
+        </clipPath>
+      </defs>
+      {/* shadow cones behind the Moon */}
+      <g opacity={mini ? 1 : 0}>
+        <polygon points="420,205 420,245 592,302 592,148" fill="#8f96b8" opacity=".38" />
+        <polygon points="420,205 420,245 574,231 574,219" fill="#000" opacity=".8" />
+        <g clipPath={`url(#sdC-${uid})`}>
+          <ellipse cx={584} cy={225} rx={24} ry={70} fill="#14112b" opacity=".45" />
+          <ellipse cx={574} cy={225} rx={9} ry={13} fill="#000" opacity=".9" />
+        </g>
+        {fadeIn("0.6s")}
+      </g>
+      <Moon cx={420} cy={225} r={20} />
+      {/* highlight rings */}
+      {(focus === "total" || focus === "both") && (
+        <circle cx={574} cy={225} r={20} fill="none" stroke="#ffc93c" strokeWidth={mini ? 8 : 4}>
+          <animate attributeName="r" values="16;26;16" dur="1.4s" repeatCount="indefinite" />
+        </circle>
+      )}
+      {(focus === "partial" || focus === "both") && (
+        <ellipse cx={590} cy={225} rx={34} ry={82} fill="none" stroke="#ff8fb1" strokeWidth={mini ? 8 : 4} strokeDasharray={mini ? "0" : "10 6"}>
+          <animate attributeName="stroke-opacity" values="1;.35;1" dur="1.4s" repeatCount="indefinite" />
+        </ellipse>
+      )}
+      {!mini && (
+        <g>
+          <Label x={95} y={420} size={26} color="#ffc93c">{tx("sun", lang)}</Label>
+          <Label x={420} y={282} size={22} color="#e8e8f0">{tx("moon", lang)}</Label>
+          <Label x={760} y={395} size={24} color="#8fd3ff">{tx("earth", lang)}</Label>
+          <Label x={240} y={70} size={16} color="#ffe27a">{tx("sunlight", lang)}</Label>
+          <Label x={300} y={160} size={15} color="#cfc8f5" anchor="middle">{tx("moonOrbit", lang)}</Label>
+          <g opacity="0">
+            <Label x={498} y={196} size={15} color="#fff">{tx("umbra", lang)}</Label>
+            <Label x={505} y={305} size={15} color="#cfd4ee">{tx("penumbra", lang)}</Label>
+            {(focus === "total" || focus === "both") && (
+              <g>
+                <line x1={560} y1={62} x2={574} y2={208} stroke="#ffc93c" strokeWidth={3} />
+                <Label x={560} y={50} size={19} color="#ffc93c">{tx("totalHere", lang)}</Label>
+              </g>
+            )}
+            {(focus === "partial" || focus === "both") && (
+              <g>
+                <line x1={560} y1={398} x2={590} y2={300} stroke="#ff8fb1" strokeWidth={3} />
+                <Label x={560} y={420} size={19} color="#ff8fb1">{tx("partialHere", lang)}</Label>
+              </g>
+            )}
+            {fadeIn("1.4s")}
+          </g>
+        </g>
+      )}
+    </g>
+  );
+}
+
+/** Small "you are here" copy of the book diagram for the sky views. */
+function ShadowInset({ lang, focus, uid }: { lang: Lang; focus: "total" | "partial"; uid: string }) {
+  return (
+    <g transform="translate(12 12)">
+      <rect x={-4} y={-4} width={244} height={168} rx={14} fill="#fff" opacity=".95" />
+      <svg x={0} y={0} width={236} height={133} viewBox="0 0 800 450">
+        <ShadowDiagram lang={lang} focus={focus} mini uid={uid} />
+      </svg>
+      <text x={118} y={154} fontSize={17} fontWeight={800} textAnchor="middle" fill={focus === "total" ? "#c98a00" : "#d6336c"}>
+        📍 {tx("youHere", lang)}: {tx(focus === "total" ? "umbra" : "penumbra", lang)}
+      </text>
+    </g>
+  );
+}
+
+function MoonBetween({ lang }: P) {
+  return (
+    <Frame bg="url(#gSpace)">
+      <Stars n={50} seed={22} />
+      <Sun cx={80} cy={225} r={100} />
+      <polygon points="180,160 580,175 580,275 180,290" fill="#ffe27a" opacity=".22" />
+      <Earth cx={680} cy={225} r={100} night="right" spin={10} id="mb1" />
+      {/* shadow appears once the Moon is in line */}
+      <g opacity="0">
+        <polygon points="398,206 582,216 582,234 398,244" fill="#000" opacity=".75" />
+        <circle cx={584} cy={225} r={9} fill="#000" opacity=".85" />
+        <animate attributeName="opacity" from="0" to="1" begin="2.8s" dur="0.8s" fill="freeze" />
+      </g>
+      <g>
+        <Moon cx={380} cy={225} r={22} />
+        <Label x={380} y={278} size={22} color="#e8e8f0">{tx("moon", lang)}</Label>
+        <animateTransform attributeName="transform" type="translate" from="0 -190" to="0 0" dur="3s" fill="freeze" calcMode="spline" keySplines="0.3 0 0.2 1" keyTimes="0;1" />
+      </g>
+      <Label x={80} y={370} size={26} color="#ffc93c">{tx("sun", lang)}</Label>
+      <Label x={680} y={370} size={26} color="#8fd3ff">{tx("earth", lang)}</Label>
+      <g opacity="0">
+        <Label x={380} y={60} size={24} color="#ffc93c" bg="#2b2350">⬇ {tx("moonComes", lang)}</Label>
+        <Label x={500} y={430} size={22} color="#fff" bg="#2b2350">🚫 {tx("lightBlocked", lang)}</Label>
+        <animate attributeName="opacity" from="0" to="1" begin="2.8s" dur="0.6s" fill="freeze" />
+      </g>
+      <ScaleNote lang={lang} dark />
+    </Frame>
+  );
+}
+
+function SolarShadow({ lang }: P) {
+  return (
+    <Frame bg="url(#gSpace)">
+      <ShadowDiagram lang={lang} focus="both" uid="full" />
+      <Label x={330} y={440} size={20} color="#fff" bg="#2b2350">{tx("moonShadowOnEarth", lang)}</Label>
+      <ScaleNote lang={lang} dark />
+    </Frame>
+  );
+}
+
+function EclipseTotal({ lang }: P) {
+  return (
+    <Frame>
+      <Village y={360} />
+      {/* the sky gets dark as the Moon covers the Sun */}
+      <rect width={800} height={450} fill="#0c0a2a" opacity="0">
+        <animate attributeName="opacity" from="0" to="0.88" begin="0.5s" dur="2.5s" fill="freeze" />
+      </rect>
+      <g opacity="0">
+        <Stars n={35} seed={23} h={300} />
+        <animate attributeName="opacity" from="0" to="1" begin="2.8s" dur="1s" fill="freeze" />
+      </g>
+      <circle cx={430} cy={150} r={100} fill="url(#gGlow)" />
+      <circle cx={430} cy={150} r={92} fill="#fff" opacity="0">
+        <animate attributeName="opacity" from="0" to="0.55" begin="2.9s" dur="1s" fill="freeze" />
+      </circle>
+      <circle cx={430} cy={150} r={70} fill="url(#gSun)" />
+      <circle cx={250} cy={150} r={72} fill="#1b1738">
+        <animate attributeName="cx" from="250" to="430" dur="3s" fill="freeze" />
+      </circle>
+      <g opacity="0">
+        <Label x={430} y={295} size={30} color="#ffc93c" bg="#2b2350">🌑 {tx("total", lang)} {tx("solar", lang)}</Label>
+        <Label x={430} y={335} size={22} color="#fff" bg="#2b2350">{tx("dayDark", lang)}</Label>
+        <animate attributeName="opacity" from="0" to="1" begin="3s" dur="0.6s" fill="freeze" />
+      </g>
+      <ShadowInset lang={lang} focus="total" uid="it" />
+    </Frame>
+  );
+}
+
+function EclipsePartial({ lang }: P) {
+  return (
+    <Frame>
+      <Village y={360} />
+      <rect width={800} height={450} fill="#0c0a2a" opacity="0">
+        <animate attributeName="opacity" from="0" to="0.25" begin="0.5s" dur="2.5s" fill="freeze" />
+      </rect>
+      <circle cx={430} cy={150} r={100} fill="url(#gGlow)" />
+      <circle cx={430} cy={150} r={70} fill="url(#gSun)" />
+      <circle cx={250} cy={150} r={72} fill="#2b2350" opacity=".92">
+        <animate attributeName="cx" from="250" to="382" dur="3s" fill="freeze" />
+      </circle>
+      <g opacity="0">
+        <Label x={430} y={295} size={30} color="#d6336c" bg="#fff">🌗 {tx("partial", lang)} {tx("solar", lang)}</Label>
+        <Label x={430} y={335} size={22} color="#2b2350" bg="#fff">{tx("partCovered", lang)}</Label>
+        <animate attributeName="opacity" from="0" to="1" begin="3s" dur="0.6s" fill="freeze" />
+      </g>
+      <ShadowInset lang={lang} focus="partial" uid="ip" />
+    </Frame>
+  );
+}
+
 const MAP: Record<string, (p: P) => ReactNode> = {
   story: Story,
   sunSky: SunSky,
@@ -911,6 +1104,10 @@ const MAP: Record<string, (p: P) => ReactNode> = {
   safety: Safety,
   lunarEclipse: LunarEclipse,
   moonSky: MoonSky,
+  moonBetween: MoonBetween,
+  solarShadow: SolarShadow,
+  eclipseTotal: EclipseTotal,
+  eclipsePartial: EclipsePartial,
 };
 
 export function SceneVisual({ v, lang, who, emoji }: { v: string; lang: Lang; who?: "r" | "g"; emoji?: string }) {

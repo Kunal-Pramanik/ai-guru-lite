@@ -11,6 +11,20 @@ import { SceneVisual } from "./Scenes";
  *   → browser voice (speechSynthesis) → silent timer.
  */
 
+/** Split a scene's text into sentences (for synced subtitles). */
+export const splitSentences = (text: string) => text.split(/(?<=[.!?।])\s+/).filter(Boolean);
+
+/** Which sentence is being spoken, given how far (0–1) the audio has played. Longer sentences take longer. */
+function sentenceAt(parts: string[], f: number) {
+  const total = parts.reduce((n, p) => n + p.length, 0) || 1;
+  let acc = 0;
+  for (let i = 0; i < parts.length; i++) {
+    acc += parts[i].length / total;
+    if (f < acc) return i;
+  }
+  return parts.length - 1;
+}
+
 let manifestPromise: Promise<Set<string>> | null = null;
 function loadManifest(): Promise<Set<string>> {
   if (!manifestPromise)
@@ -28,6 +42,7 @@ export function VideoPlayer({ topic, lang, onDone }: { topic: Topic; lang: Lang;
   const [playing, setPlaying] = useState(false);
   const [started, setStarted] = useState(false);
   const [finished, setFinished] = useState(false);
+  const [sent, setSent] = useState(0); // sentence being spoken now
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const runRef = useRef(0);
@@ -67,11 +82,12 @@ export function VideoPlayer({ topic, lang, onDone }: { topic: Topic; lang: Lang;
     const voice = pickVoice(lang);
     if (voice && "speechSynthesis" in window) {
       // speak sentence by sentence (long utterances get cut in Chrome)
-      const parts = text.split(/(?<=[.!?।])\s+/).filter(Boolean);
+      const parts = splitSentences(text);
       let k = 0;
       const say = () => {
         if (run !== runRef.current) return;
         if (k >= parts.length) return next();
+        setSent(k);
         const u = new SpeechSynthesisUtterance(parts[k++]);
         u.voice = voice;
         u.lang = voice.lang;
@@ -82,7 +98,16 @@ export function VideoPlayer({ topic, lang, onDone }: { topic: Topic; lang: Lang;
       };
       say();
     } else {
-      timerRef.current = setTimeout(next, Math.max(3500, text.length * 75));
+      // no voice at all: move the subtitle highlight sentence by sentence on a timer
+      const parts = splitSentences(text);
+      let k = 0;
+      const tick = () => {
+        if (run !== runRef.current) return;
+        if (k >= parts.length) return next();
+        setSent(k);
+        timerRef.current = setTimeout(tick, Math.max(1800, parts[k++].length * 75));
+      };
+      tick();
     }
   }
 
@@ -90,6 +115,7 @@ export function VideoPlayer({ topic, lang, onDone }: { topic: Topic; lang: Lang;
     stopAll();
     const run = runRef.current;
     setIdx(i);
+    setSent(0);
     setFinished(false);
     setPlaying(true);
     const text = scenes[i][lang];
@@ -107,6 +133,10 @@ export function VideoPlayer({ topic, lang, onDone }: { topic: Topic; lang: Lang;
     if (manifest.current.has(key)) {
       const a = new Audio(`/audio/${key}.mp3`);
       audioRef.current = a;
+      const parts = splitSentences(text);
+      a.ontimeupdate = () => {
+        if (run === runRef.current && a.duration) setSent(sentenceAt(parts, a.currentTime / a.duration));
+      };
       a.onended = next;
       a.onerror = () => speakFallback(text, run, next);
       a.play().catch(() => speakFallback(text, run, next));
@@ -164,8 +194,17 @@ export function VideoPlayer({ topic, lang, onDone }: { topic: Topic; lang: Lang;
         <span className={`mt-1 grid h-11 w-11 shrink-0 place-items-center rounded-full text-2xl ${scene.who === "r" ? "bg-berry/15" : "bg-grape/15"}`}>{scene.who === "r" ? "👧" : "🦉"}</span>
         <div>
           <p className={`text-sm font-extrabold ${scene.who === "r" ? "text-berry" : "text-grape"}`}>{scene.who === "r" ? t.rashmika : t.guru}</p>
-          <p key={`${idx}-${lang}`} className="anim-in text-xl font-bold leading-snug text-ink sm:text-2xl">
-            {scene[lang]}
+          <p key={`${idx}-${lang}`} className="anim-in text-xl font-bold leading-snug sm:text-2xl">
+            {splitSentences(scene[lang]).map((s, k) => (
+              <span
+                key={k}
+                className={`rounded-lg transition-colors duration-300 ${
+                  !started || finished ? "text-ink" : k === sent ? "bg-sun/60 text-ink" : k < sent ? "text-ink/45" : "text-ink/30"
+                }`}
+              >
+                {s}{" "}
+              </span>
+            ))}
           </p>
         </div>
       </div>

@@ -239,17 +239,17 @@
       "section": "12.3.1",
       "pages": "180-182",
       "emoji": "🌒",
-      "diagram": "solarEclipse",
+      "diagram": "solarShadow",
       "title": { "hi": "सूर्य ग्रहण", "en": "Solar eclipse" },
       "short": { "hi": "जब चाँद सूरज को ढक ले", "en": "When the Moon hides the Sun" },
       "term": { "hi": "सूर्य ग्रहण", "en": "Solar eclipse" },
       "keywords": "12.3.1 Solar eclipse, Moon between Sun and Earth, Fig 12.13 geometry of solar eclipse, total solar eclipse, partial solar eclipse, Fig 12.14 diamond ring, safe viewing caution, Fig 12.15 public solar eclipse viewing Ooty, mirror ball projection, superstitions, grahan, Surya Siddhanta",
       "scenes": [
         { "v": "story", "who": "r", "hi": "गुरु जी, सूर्य ग्रहण में दिन में ही अंधेरा क्यों हो जाता है?", "en": "Guru ji, why does it get dark in the daytime during a solar eclipse?" },
-        { "v": "solarEclipse", "who": "g", "hi": "जब चाँद घूमते-घूमते सूरज और पृथ्वी के ठीक बीच में आ जाता है, तो वह सूरज की रोशनी रोक लेता है।", "en": "When the Moon, going around, comes exactly between the Sun and the Earth, it blocks the sunlight." },
-        { "v": "solarEclipse", "who": "g", "hi": "चाँद की छाया पृथ्वी के एक छोटे हिस्से पर पड़ती है। इसे किताब में सूर्य ग्रहण, यानी Solar Eclipse कहते हैं।", "en": "The Moon's shadow falls on a small part of the Earth. The textbook calls this a solar eclipse." },
-        { "v": "eclipseSky", "who": "g", "hi": "जहाँ पूरी छाया पड़ती है, वहाँ सूरज पूरा ढक जाता है। यह पूर्ण सूर्य ग्रहण है। कुछ मिनट के लिए दिन में रात जैसा अंधेरा हो जाता है!", "en": "Where the full shadow falls, the Sun is fully covered. This is a total solar eclipse. For a few minutes, the day becomes dark like night!" },
-        { "v": "eclipseSky", "who": "g", "hi": "आस-पास की जगहों पर सूरज का कुछ हिस्सा ही ढकता है। इसे आंशिक सूर्य ग्रहण कहते हैं।", "en": "In nearby places, only part of the Sun is covered. This is called a partial solar eclipse." },
+        { "v": "moonBetween", "who": "g", "hi": "जब चाँद घूमते-घूमते सूरज और पृथ्वी के ठीक बीच में आ जाता है, तो वह सूरज की रोशनी रोक लेता है।", "en": "When the Moon, going around, comes exactly between the Sun and the Earth, it blocks the sunlight." },
+        { "v": "solarShadow", "who": "g", "hi": "चाँद की छाया पृथ्वी के एक छोटे हिस्से पर पड़ती है। इसे किताब में सूर्य ग्रहण, यानी Solar Eclipse कहते हैं।", "en": "The Moon's shadow falls on a small part of the Earth. The textbook calls this a solar eclipse." },
+        { "v": "eclipseTotal", "who": "g", "hi": "जहाँ पूरी छाया पड़ती है, वहाँ सूरज पूरा ढक जाता है। यह पूर्ण सूर्य ग्रहण है। कुछ मिनट के लिए दिन में रात जैसा अंधेरा हो जाता है!", "en": "Where the full shadow falls, the Sun is fully covered. This is a total solar eclipse. For a few minutes, the day becomes dark like night!" },
+        { "v": "eclipsePartial", "who": "g", "hi": "आस-पास की जगहों पर सूरज का कुछ हिस्सा ही ढकता है। इसे आंशिक सूर्य ग्रहण कहते हैं।", "en": "In nearby places, only part of the Sun is covered. This is called a partial solar eclipse." },
         { "v": "safety", "who": "g", "hi": "सावधान! सूर्य ग्रहण को कभी सीधे आँखों से, धूप के चश्मे से या दूरबीन से मत देखो। आँखें खराब हो सकती हैं। ग्रहण वाला खास चश्मा लगाओ, या शीशे से दीवार पर सूरज की परछाई बनाकर देखो।", "en": "Careful! Never look at a solar eclipse directly, or through sunglasses or binoculars. It can damage your eyes. Use special eclipse glasses, or use a mirror to make the Sun's image on a wall." }
       ],
       "notes": {
