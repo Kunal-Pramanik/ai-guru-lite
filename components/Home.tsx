@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { CHAPTER, TOPICS, isLang, topicById, type Lang } from "@/lib/content";
 import { ui } from "@/lib/ui";
 import { LangToggle, Logo, OwlIcon } from "./Chrome";
+import { Welcome, welcomeText, type Profile } from "./Welcome";
 
 type Result = { isThisChapter: boolean; topicId: string | null; confidence: number };
 
@@ -37,16 +38,29 @@ export function Home({ initialLang }: { initialLang: Lang | null }) {
   const [error, setError] = useState(false);
   const camRef = useRef<HTMLInputElement>(null);
   const galRef = useRef<HTMLInputElement>(null);
+  const [profile, setProfile] = useState<Profile | null>(null);
+  const [ready, setReady] = useState(false);
   const t = ui(lang);
+  const w = welcomeText(lang);
 
   useEffect(() => {
-    if (initialLang) return;
     try {
       const saved = localStorage.getItem("aiGuruLang");
-      // eslint-disable-next-line react-hooks/set-state-in-effect -- restore saved language once
-      if (isLang(saved)) setLang(saved);
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- restore saved language/profile once
+      if (!initialLang && isLang(saved)) setLang(saved);
+      const p = JSON.parse(localStorage.getItem("aiGuruProfile") || "null");
+      if (p && typeof p.name === "string" && p.cls === 7) setProfile(p);
     } catch {}
+    setReady(true);
   }, [initialLang]);
+
+  const saveProfile = (p: Profile | null) => {
+    setProfile(p);
+    try {
+      if (p) localStorage.setItem("aiGuruProfile", JSON.stringify(p));
+      else localStorage.removeItem("aiGuruProfile");
+    } catch {}
+  };
 
   const changeLang = (l: Lang) => {
     setLang(l);
@@ -76,12 +90,35 @@ export function Home({ initialLang }: { initialLang: Lang | null }) {
 
   const topic = result?.topicId ? topicById(result.topicId) : null;
 
+  if (!ready)
+    return (
+      <main className="grid min-h-[100dvh] place-items-center">
+        <div className="anim-floaty">
+          <OwlIcon size={110} />
+        </div>
+      </main>
+    );
+  if (!profile) return <Welcome lang={lang} onLang={changeLang} onDone={saveProfile} />;
+
   return (
     <main className="mx-auto w-full max-w-3xl px-4 pb-16 pt-3">
       <header className="mb-4 flex items-center justify-between gap-2">
         <Logo lang={lang} />
         <LangToggle lang={lang} onChange={changeLang} />
       </header>
+
+      {/* Greeting */}
+      <div className="mb-4 flex items-center justify-between gap-2 rounded-3xl bg-white/80 px-4 py-3 shadow">
+        <p className="text-xl font-extrabold">
+          {w.hi}, <span className="text-berry">{profile.name}</span>! 👋
+          <span className="block text-base font-bold text-ink/60">
+            {t.classN} {profile.cls} · {w.science}
+          </span>
+        </p>
+        <button onClick={() => saveProfile(null)} className="shrink-0 rounded-full bg-lav px-3 py-2 text-base font-bold text-grape">
+          ✏️ {w.change}
+        </button>
+      </div>
 
       {/* Hero / upload */}
       {!busy && !result && (
